@@ -107,7 +107,7 @@ while True:   # লুপের শুরু
         computer_win = f"{name} Your score is {you_win} and computer score is {Comp_win}.  So computer is win , Try again "
         print(computer_win)
         with open("result.txt", "a") as f:
-            f.write(f" {computer_win}")
+            f.write(f" {computer_win} \n")
 
 
 
