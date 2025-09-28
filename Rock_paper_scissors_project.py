@@ -87,13 +87,28 @@ while True:   # লুপের শুরু
     print(f"Computer win : {Comp_win}")
 
     print(f" Final reult is ........")
+  
 
     if(you_win == Comp_win):
-        print(f"{name} Your score is {you_win} and computer score is {Comp_win}. So match result is  draw ")
+        match_draw = (f"{name} Your score is {you_win} and computer score is {Comp_win}. So match result is  draw ")
+        print(match_draw)
+        with open("result.txt", "a") as f:
+            f.write(f"{match_draw}")
+
+
     elif(you_win > Comp_win ):
-        print(f"{name} Your score is {you_win} and computer score is {Comp_win}. Congrats {name} you are the winner  ")
+        user_win = (f"{name} Your score is {you_win} and computer score is {Comp_win}. Congrats {name} you are the winner  ")
+        print(user_win)
+        with open("result.txt", "a") as f:
+            f.write(f"{user_win}")
+
+
     else:
-        print(f"{name} Your score is {you_win} and computer score is {Comp_win}.  So computer is win , Try again ")
+        computer_win = f"{name} Your score is {you_win} and computer score is {Comp_win}.  So computer is win , Try again "
+        print(computer_win)
+        with open("result.txt", "a") as f:
+            f.write(f" {computer_win}")
+
 
 
 
@@ -101,6 +116,5 @@ while True:   # লুপের শুরু
     if reply != "yes":
         print("👋 Thanks for playing! Goodbye.")
         break
-
 
       
